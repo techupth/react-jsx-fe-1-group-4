@@ -10,13 +10,14 @@ function getCurrentDateTime() {
   const seconds = String(now.getSeconds()).padStart(2, "0");
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
-
 function IntroSection() {
   const articleStyles = {
     container: "article",
     title: "article-title",
     body: "article-body",
-    link: "article-link"};
+    link: "article-link"
+  };
+
 
   return (
     <div className={articleStyles.container}>
@@ -28,8 +29,7 @@ function IntroSection() {
       <div className="bootcamp-start-time">วันเวลาเริ่มหลักสูตร คือ {getCurrentDateTime()} </div>
     </div>
   );
-}
-
+};
 function LoginForm() {
   return (
     <div className="login-container">
@@ -45,13 +45,14 @@ function LoginForm() {
   );
 }
 
+
 function App() {
   return (
     <div className="app">
       <IntroSection />
       <LoginForm />
-    </div>
+      </div>
   );
-}
+};
 
 export default App;
